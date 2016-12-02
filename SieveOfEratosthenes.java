@@ -25,13 +25,9 @@ public class SieveOfEratosthenes {
                 //if current array position equals true then the loop goes through
                 //the rest of the array setting the multiple of the current array
                 //position to false
-                for (int k = j+1; k < 100; k++){
-
-                    //determines if current array position is multiple of 'j'
-                    if((k % j) == 0){
+                for (int k = j * 2; k < 100; k += j){
 
                         basket[k] = false; //set array position to false
-                    }
                 }
             }
         }
